@@ -1,1 +1,48 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout your Git repository
+                script {
+                    checkout scm
+                }
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Add your build commands here
+                sh 'echo "Building the project..."'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Add your test commands here
+                sh 'echo "Running tests..."'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Add your deployment commands here
+                sh 'echo "Deploying the application..."'
+            }
+        }
+    }
+
+    post {
+        success {
+            // Print a success message
+            echo "Pipeline completed successfully!"
+        }
+
+        failure {
+            // Print a failure message
+            echo "Pipeline failed!"
+        }
+    }
+}
 

@@ -2,14 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout your Git repository
-                script {
-                    checkout scm
-                }
-            }
-        }
+        
 
         stage('Build') {
             steps {

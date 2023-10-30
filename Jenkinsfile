@@ -26,15 +26,5 @@ pipeline {
         }
     }
 
-    post {
-        success {
-            // Print a success message
-            echo "Pipeline completed successfully!"
-        }
-
-        failure {
-            // Print a failure message
-            echo "Pipeline failed!"
-        }
-    }
+    
 }
